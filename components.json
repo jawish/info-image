@@ -1,0 +1,91 @@
+{
+  "library": "info-image",
+  "description": "info-image",
+  "components": [
+    {
+      "description": "",
+      "displayName": "Image",
+      "methods": [],
+      "props": {
+        "url": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "''",
+            "computed": false
+          },
+          "description": ""
+        },
+        "scale": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "'center'",
+            "computed": false
+          },
+          "description": ""
+        },
+        "bottom": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "null",
+            "computed": false
+          },
+          "description": ""
+        },
+        "top": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "0",
+            "computed": false
+          },
+          "description": ""
+        },
+        "left": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "0",
+            "computed": false
+          },
+          "description": ""
+        }
+      },
+      "fileName": "./src/components/image.jsx",
+      "hasProps": true
+    },
+    {
+      "description": "",
+      "displayName": "Canvas",
+      "methods": [],
+      "props": {
+        "title": {
+          "defaultValue": {
+            "value": "'Test Title'",
+            "computed": false
+          }
+        },
+        "width": {
+          "defaultValue": {
+            "value": "600",
+            "computed": false
+          }
+        }
+      },
+      "fileName": "./src/components/canvas.jsx",
+      "hasProps": true
+    }
+  ]
+}
