@@ -16,7 +16,12 @@
   },
   "homepage": "https://github.com/scienceemmenah/info-image",
   "dependencies": {
-    "fabric-webpack": "^1.6.0-rc.1"
+    "fabric-webpack": "^1.6.0-rc.1",
+    "svg.draggable.js": "^2.2.0",
+    "svg.filter.js": "^2.0.2",
+    "svg.resize.js": "^1.4.0",
+    "svg.select.js": "^2.0.3",
+    "svgjs": "^2.2.5"
   },
   "devDependencies": {
     "electrode-archetype-react-component": "^1.0.0",

@@ -13,18 +13,7 @@ export default class Canvas extends React.Component {
   }
 
   componentDidMount () {
-    let {title} = this.props;
-
-    let fCanvas = new fabric.Canvas('canvas');
-    let fTitle = new fabric.Text(title, {
-      top: 20 + 20,
-      left: 600 / 2,
-      originX: 'center',
-      textAlign: 'center',
-      fontSize: 26,
-      fontWeight: 'bold'
-    });
-    //fCanvas.add(fTitle);
+    const fCanvas = new fabric.Canvas('canvas');
 
     this.setState({canvas: fCanvas});
   }

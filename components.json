@@ -4,6 +4,211 @@
   "components": [
     {
       "description": "",
+      "displayName": "Text",
+      "methods": [
+        {
+          "name": "update",
+          "docblock": null,
+          "modifiers": [],
+          "params": [
+            {
+              "name": "{\n    canvas,\n    text, \n    angle,\n    backgroundColor,\n    charSpacing,\n    fillColor,\n    fontFamily,\n    fontSize,\n    fontStyle,\n    fontWeight,\n    lineHeight,\n    lockRotation,\n    shadow,\n    strokeColor,\n    strokeWidth,\n    textAlign\n    }",
+              "type": null
+            }
+          ],
+          "returns": null
+        }
+      ],
+      "props": {
+        "canvas": {
+          "type": {
+            "name": "any"
+          },
+          "required": false,
+          "description": ""
+        },
+        "text": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "'Test2'",
+            "computed": false
+          },
+          "description": ""
+        },
+        "angle": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "0",
+            "computed": false
+          },
+          "description": ""
+        },
+        "backgroundColor": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "'transparent'",
+            "computed": false
+          },
+          "description": ""
+        },
+        "charSpacing": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "null",
+            "computed": false
+          },
+          "description": ""
+        },
+        "fillColor": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "null",
+            "computed": false
+          },
+          "description": ""
+        },
+        "fontFamily": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "null",
+            "computed": false
+          },
+          "description": ""
+        },
+        "fontSize": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "defaultValue": {
+            "value": "null",
+            "computed": false
+          },
+          "description": ""
+        },
+        "fontStyle": {
+          "type": {
+            "name": "enum",
+            "value": [
+              {
+                "value": "''",
+                "computed": false
+              },
+              {
+                "value": "'normal'",
+                "computed": false
+              },
+              {
+                "value": "'italic'",
+                "computed": false
+              },
+              {
+                "value": "'oblique'",
+                "computed": false
+              }
+            ]
+          },
+          "required": false,
+          "description": ""
+        },
+        "fontWeight": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "description": ""
+        },
+        "lineHeight": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "lockRotation": {
+          "type": {
+            "name": "any"
+          },
+          "required": false,
+          "description": ""
+        },
+        "opacity": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "shadow": {
+          "type": {
+            "name": "object"
+          },
+          "required": false,
+          "description": ""
+        },
+        "strokeColor": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "description": ""
+        },
+        "strokeWidth": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "textAlign": {
+          "type": {
+            "name": "enum",
+            "value": [
+              {
+                "value": "'left'",
+                "computed": false
+              },
+              {
+                "value": "'center'",
+                "computed": false
+              },
+              {
+                "value": "'right'",
+                "computed": false
+              },
+              {
+                "value": "'justify'",
+                "computed": false
+              }
+            ]
+          },
+          "required": false,
+          "description": ""
+        }
+      },
+      "fileName": "./src/components/text.jsx",
+      "hasProps": true
+    },
+    {
+      "description": "",
       "displayName": "Image",
       "methods": [],
       "props": {
