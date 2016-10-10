@@ -12,22 +12,29 @@ info-image
 | Property | Type | Description | Default |
 | -------- | ---- | ----------- | ------- |
 | *canvas* | any |  | 
-| *text* | string |  | `'Test2'`
+| *text* | string |  | `''`
 | *angle* | number |  | `0`
 | *backgroundColor* | string |  | `'transparent'`
-| *charSpacing* | number |  | `null`
-| *fillColor* | string |  | `null`
-| *fontFamily* | string |  | `null`
-| *fontSize* | string |  | `null`
+| *charSpacing* | number |  | 
+| *fillColor* | string |  | 
+| *fontFamily* | string |  | 
+| *fontSize* | string |  | 
 | *fontStyle* | enum |  | 
 | *fontWeight* | string |  | 
+| *height* | number |  | 
+| *hasControls* | bool |  | 
+| *left* | number |  | 
 | *lineHeight* | number |  | 
-| *lockRotation* | any |  | 
+| *lockRotation* | bool |  | `true`
 | *opacity* | number |  | 
+| *selectable* | bool |  | 
 | *shadow* | object |  | 
 | *strokeColor* | string |  | 
 | *strokeWidth* | number |  | 
 | *textAlign* | enum |  | 
+| *top* | number |  | 
+| *visible* | bool |  | 
+| *width* | number |  | 
 
 ### import
 
@@ -45,11 +52,20 @@ import  from "info-image";
 
 | Property | Type | Description | Default |
 | -------- | ---- | ----------- | ------- |
-| *url* | string |  | `''`
-| *scale* | number |  | `'center'`
-| *bottom* | number |  | `null`
-| *top* | number |  | `0`
-| *left* | number |  | `0`
+| *canvas* | any |  | 
+| *src* | string |  | 
+| *angle* | number |  | `0`
+| *fillColor* | string |  | 
+| *hasControls* | bool |  | 
+| *height* | number |  | 
+| *left* | number |  | 
+| *lockRotation* | bool |  | `true`
+| *lockUniScaling* | bool |  | 
+| *opacity* | number |  | 
+| *selectable* | bool |  | 
+| *top* | number |  | 
+| *visible* | bool |  | 
+| *width* | number |  | 
 
 ### import
 

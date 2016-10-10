@@ -29,6 +29,8 @@ export default class Image extends React.Component {
 
     if (!canvas) return;
 
+    const fIndex = restProps.index;
+
     Object.keys(restProps).forEach(key => {
       !validConfigProps.includes(key) && delete restProps[key];
     });
@@ -36,6 +38,7 @@ export default class Image extends React.Component {
     if (typeof src === 'string') {
       fabric.Image.fromURL(src, fImage => {
         canvas.add(fImage);
+        fImage.moveTo(fIndex);
       });
     }
     else {
@@ -43,6 +46,7 @@ export default class Image extends React.Component {
 
       setTimeout(() => {
         canvas.add(fImage);
+        fImage.moveTo(fIndex);
       });
     }
   }
@@ -50,7 +54,7 @@ export default class Image extends React.Component {
   render () {
     this.update(this.props);
 
-    return null;
+    return <div />;
   }
 
 }

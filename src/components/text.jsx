@@ -35,7 +35,7 @@ export default class Text extends React.Component {
     this.update = this.update.bind(this);
   }
 
-  update ({canvas, text, ...restProps}) {
+  update ({canvas, text, index, onKeyDown, ...restProps}) {
     
     if (!canvas) return;
 
@@ -45,15 +45,26 @@ export default class Text extends React.Component {
 
     const fText = new fabric.Textbox(text, restProps);
 
+    if (onKeyDown) {
+      fText.on('editing:entered', function(e) {
+        this.hiddenTextarea.addEventListener('keydown', onKeyDown);
+      });
+      
+      fText.on('editing:exited', function(e) {
+        this.hiddenTextarea.removeEventListener('keydown', onKeyDown);
+      });
+    }
+
     setTimeout(() => {
       canvas.add(fText);
+      fText.moveTo(index);
     });
   }
 
   render () {
     this.update(this.props);
 
-    return null;
+    return <div />;
   }
 
 }

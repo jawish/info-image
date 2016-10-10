@@ -12,7 +12,7 @@
           "modifiers": [],
           "params": [
             {
-              "name": "{\n    canvas,\n    text, \n    angle,\n    backgroundColor,\n    charSpacing,\n    fillColor,\n    fontFamily,\n    fontSize,\n    fontStyle,\n    fontWeight,\n    lineHeight,\n    lockRotation,\n    shadow,\n    strokeColor,\n    strokeWidth,\n    textAlign\n    }",
+              "name": "{canvas, text, ...restProps}",
               "type": null
             }
           ],
@@ -31,9 +31,9 @@
           "type": {
             "name": "string"
           },
-          "required": false,
+          "required": true,
           "defaultValue": {
-            "value": "'Test2'",
+            "value": "''",
             "computed": false
           },
           "description": ""
@@ -65,10 +65,6 @@
             "name": "number"
           },
           "required": false,
-          "defaultValue": {
-            "value": "null",
-            "computed": false
-          },
           "description": ""
         },
         "fillColor": {
@@ -76,10 +72,6 @@
             "name": "string"
           },
           "required": false,
-          "defaultValue": {
-            "value": "null",
-            "computed": false
-          },
           "description": ""
         },
         "fontFamily": {
@@ -87,10 +79,6 @@
             "name": "string"
           },
           "required": false,
-          "defaultValue": {
-            "value": "null",
-            "computed": false
-          },
           "description": ""
         },
         "fontSize": {
@@ -98,10 +86,6 @@
             "name": "string"
           },
           "required": false,
-          "defaultValue": {
-            "value": "null",
-            "computed": false
-          },
           "description": ""
         },
         "fontStyle": {
@@ -136,6 +120,27 @@
           "required": false,
           "description": ""
         },
+        "height": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "hasControls": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
+          "description": ""
+        },
+        "left": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
         "lineHeight": {
           "type": {
             "name": "number"
@@ -145,14 +150,25 @@
         },
         "lockRotation": {
           "type": {
-            "name": "any"
+            "name": "bool"
           },
           "required": false,
+          "defaultValue": {
+            "value": "true",
+            "computed": false
+          },
           "description": ""
         },
         "opacity": {
           "type": {
             "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "selectable": {
+          "type": {
+            "name": "bool"
           },
           "required": false,
           "description": ""
@@ -202,6 +218,27 @@
           },
           "required": false,
           "description": ""
+        },
+        "top": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "visible": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
+          "description": ""
+        },
+        "width": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
         }
       },
       "fileName": "./src/components/text.jsx",
@@ -210,42 +247,36 @@
     {
       "description": "",
       "displayName": "Image",
-      "methods": [],
+      "methods": [
+        {
+          "name": "update",
+          "docblock": null,
+          "modifiers": [],
+          "params": [
+            {
+              "name": "{canvas, src, ...restProps}",
+              "type": null
+            }
+          ],
+          "returns": null
+        }
+      ],
       "props": {
-        "url": {
+        "canvas": {
+          "type": {
+            "name": "any"
+          },
+          "required": false,
+          "description": ""
+        },
+        "src": {
           "type": {
             "name": "string"
           },
-          "required": false,
-          "defaultValue": {
-            "value": "''",
-            "computed": false
-          },
+          "required": true,
           "description": ""
         },
-        "scale": {
-          "type": {
-            "name": "number"
-          },
-          "required": false,
-          "defaultValue": {
-            "value": "'center'",
-            "computed": false
-          },
-          "description": ""
-        },
-        "bottom": {
-          "type": {
-            "name": "number"
-          },
-          "required": false,
-          "defaultValue": {
-            "value": "null",
-            "computed": false
-          },
-          "description": ""
-        },
-        "top": {
+        "angle": {
           "type": {
             "name": "number"
           },
@@ -254,6 +285,27 @@
             "value": "0",
             "computed": false
           },
+          "description": ""
+        },
+        "fillColor": {
+          "type": {
+            "name": "string"
+          },
+          "required": false,
+          "description": ""
+        },
+        "hasControls": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
+          "description": ""
+        },
+        "height": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
           "description": ""
         },
         "left": {
@@ -261,10 +313,59 @@
             "name": "number"
           },
           "required": false,
+          "description": ""
+        },
+        "lockRotation": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
           "defaultValue": {
-            "value": "0",
+            "value": "true",
             "computed": false
           },
+          "description": ""
+        },
+        "lockUniScaling": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
+          "description": ""
+        },
+        "opacity": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "selectable": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
+          "description": ""
+        },
+        "top": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
+          "description": ""
+        },
+        "visible": {
+          "type": {
+            "name": "bool"
+          },
+          "required": false,
+          "description": ""
+        },
+        "width": {
+          "type": {
+            "name": "number"
+          },
+          "required": false,
           "description": ""
         }
       },
@@ -274,7 +375,15 @@
     {
       "description": "",
       "displayName": "Canvas",
-      "methods": [],
+      "methods": [
+        {
+          "name": "onDownload",
+          "docblock": null,
+          "modifiers": [],
+          "params": [],
+          "returns": null
+        }
+      ],
       "props": {
         "title": {
           "defaultValue": {

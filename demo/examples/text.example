@@ -1,4 +1,5 @@
 <Canvas>
     <Image src="https://1.bp.blogspot.com/-jOLa-LdidQU/V-qV2oJn1aI/AAAAAAAABPg/-6OhKKPhxT89Vs9HhyKMEnyG_0ncWGjJQCLcB/s640/image00.png" />
-    <Text text="bla ތާނަ bla bla"/>
+    <Text top={20} left={200} width={400} height={50} text="bla ތާނަ bla bla" onKeyDown={(e) => console.log(e)}/>
+    <Text top={100} left={20} width={400} height={50} text="bla ތާނަ bla bla"/>
 </Canvas>

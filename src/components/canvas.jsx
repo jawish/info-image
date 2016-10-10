@@ -12,6 +12,15 @@ export default class Canvas extends React.Component {
     };
   }
 
+  onDownload () {
+    let link = document.createElement('a');
+    link.setAttribute('href', this.state.canvas.toDataURL());
+    link.setAttribute('download', this.props.title.toLowerCase() + '.png');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
+
   componentDidMount () {
     const fCanvas = new fabric.Canvas('canvas');
 
@@ -25,14 +34,15 @@ export default class Canvas extends React.Component {
       return React.cloneElement(child, {
         index: id,
         canvas: this.state.canvas,
-        ...parentProps
+        parentProps
       });
     });
 
     return (
       <div>
-        <canvas id="canvas" width="600"></canvas>
+        <canvas id="canvas" width="600" height="600"></canvas>
         {childrenWithProps}
+        <button onClick={this.onDownload.bind(this)}>Download</button>
       </div>
     );
   }
