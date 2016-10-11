@@ -37,6 +37,7 @@ export default class Image extends React.Component {
 
     if (typeof src === 'string') {
       fabric.Image.fromURL(src, fImage => {
+        fImage.set(restProps);
         canvas.add(fImage);
         fImage.moveTo(fIndex);
       });
