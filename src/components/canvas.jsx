@@ -7,6 +7,8 @@ export default class Canvas extends React.Component {
   constructor (props) {
     super(props);
 
+    this.children = {};
+
     this.state = {
       canvas: null
     };
@@ -23,6 +25,14 @@ export default class Canvas extends React.Component {
 
   componentDidMount () {
     const fCanvas = new fabric.Canvas('canvas');
+
+    fCanvas.on('object:modified', ({ target }) => {
+      console.log(target);
+    });
+
+    fCanvas.on('text:changed', ({ target }) => {
+      console.log(target);
+    });
 
     this.setState({canvas: fCanvas});
   }
